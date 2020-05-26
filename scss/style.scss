@@ -1,0 +1,132 @@
+@import '_reset';
+@import '_mixins';
+
+
+.container {
+    margin: 0 auto;
+    width: 800px;
+    height: 540px;
+    background-image: url(../image/parfum.jpeg.jpg);
+    background-size: 100%;
+
+    @include isDesktop{
+    width: 100%;
+    height:780px;
+
+}}
+h1{
+    
+    text-shadow: 0 0 8px white;
+    color: white;
+    font-family: 'Josefin Slab', serif;
+    font-size: 60px;
+    text-align: center;
+    padding-top: 50px;
+
+    @include isDesktop{
+    font-size:90px ;
+}}
+.todo-component {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    padding: 0 20px;
+
+    @include isDesktop{
+    padding: 0 60px;
+}}
+.todo-component{
+    &__control {
+       display: flex;
+       flex-flow: row nowrap;
+       padding-left: 170px;
+    
+    @include isDesktop{
+        padding-left: 240px;;
+        margin-top: 20px;
+        
+    }
+    }
+   
+    &__control input {
+       height: 40px;
+       width: 370px;
+       border-color: #d45f5f;
+       border-radius: 5px;
+
+     @include isDesktop{
+      height: 60px;
+      width: 600px;
+      font-size: 20px
+}}
+    &__control button{
+        height: 38px;
+        width: 64px;
+        background-color: #c79292;
+        border-radius: 5px;
+        color: white ;
+        
+    @include isDesktop{  
+        height: 60px;
+        width: 100px;
+        font-size: 20px
+    }
+     
+    }}
+   #input-count,#total,#total-done{
+        color: #a53d3d;
+        @include isDesktop{
+            font-size: 25px;
+    }}
+        
+
+.todolist {
+    width: 100%;
+    padding-left: 200px;
+    margin: 10px 0;
+    
+    @include isDesktop{
+    padding-left: 240px;
+
+}}
+.todolist {
+    &__item {
+        display: flex;
+        width: 365px;
+        height: 40px;
+        background-color:#d45f5f05;
+        border: 1px solid #d45f5f;
+        border-radius: 5px;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5px 0;
+        
+    @include isDesktop{
+        width: 600px;
+        height: 50px;
+
+    }}
+    &__item input[type='checkbox'], .todolist__item button {
+        margin: 0 10px;
+        background-color: #edc9ae;
+        
+    @include isDesktop{
+        padding: 5px;
+    }}
+    &__item span {
+        width: 100%;
+        word-break: break-all;
+        @include isDesktop{
+         color: #543030;
+         font-size: 25px;
+        }
+        
+}}
+.complete {
+    border: 2px solid #802727;
+}
+
+.complete.todolist__item span {
+    text-decoration: line-through;
+}
+

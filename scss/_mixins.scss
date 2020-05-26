@@ -1,0 +1,9 @@
+$desktop: 1124px;
+
+
+
+@mixin isDesktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
