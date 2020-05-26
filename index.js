@@ -25,7 +25,7 @@ function handleInputCount(event) {
         return;
     }
 
-    inputCount.innerText = 'Characters count: ' + count;
+    inputCount.innerText = 'Count: ' + count;
 }
 
 function handleItemClick(event) {
@@ -109,6 +109,7 @@ function renderTodoItem(text, status, id) {
     listItem.setAttribute('data-todoid', id);
     todoList.append(listItem);
     todoList.prepend (inputTotal);
+    todoList.append(inputTotalDone)
    
 
     let total=event.target.value++;

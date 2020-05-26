@@ -4,8 +4,9 @@
 
 .container {
     margin: 0 auto;
-    width: 800px;
-    height: 540px;
+    width: 100%;
+    height: 230px;
+    
     background-image: url(../image/parfum.jpeg.jpg);
     background-size: 100%;
 
@@ -19,18 +20,21 @@ h1{
     text-shadow: 0 0 8px white;
     color: white;
     font-family: 'Josefin Slab', serif;
-    font-size: 60px;
-    text-align: center;
-    padding-top: 50px;
+    font-size: 30px;
+    padding-left: 35px;
+
+    padding-top: 20px;
 
     @include isDesktop{
-    font-size:90px ;
+    font-size:80px ;
+    text-align: center;
 }}
 .todo-component {
     display: flex;
     flex-flow: column;
     width: 100%;
     padding: 0 20px;
+    padding-left: 40px;
 
     @include isDesktop{
     padding: 0 60px;
@@ -39,7 +43,7 @@ h1{
     &__control {
        display: flex;
        flex-flow: row nowrap;
-       padding-left: 170px;
+       
     
     @include isDesktop{
         padding-left: 240px;;
@@ -49,8 +53,8 @@ h1{
     }
    
     &__control input {
-       height: 40px;
-       width: 370px;
+       height: 30px;
+       width: 270px;
        border-color: #d45f5f;
        border-radius: 5px;
 
@@ -60,8 +64,8 @@ h1{
       font-size: 20px
 }}
     &__control button{
-        height: 38px;
-        width: 64px;
+        height: 30px;
+        width: 28px;
         background-color: #c79292;
         border-radius: 5px;
         color: white ;
@@ -82,8 +86,8 @@ h1{
 
 .todolist {
     width: 100%;
-    padding-left: 200px;
     margin: 10px 0;
+    margin-top: 50px;
     
     @include isDesktop{
     padding-left: 240px;
@@ -92,9 +96,9 @@ h1{
 .todolist {
     &__item {
         display: flex;
-        width: 365px;
-        height: 40px;
-        background-color:#d45f5f05;
+        width: 265px;
+        height: 30px;
+        background-color:white;
         border: 1px solid #d45f5f;
         border-radius: 5px;
         justify-content: space-between;
