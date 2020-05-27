@@ -21,9 +21,11 @@ function handleInputCount(event) {
     const count = event.target.value.length;
 
     if (count === 0) {
-        inputCount.innerText = '';
+       inputCount.innerText = '';
         return;
+        
     }
+  
 
     inputCount.innerText = 'Count: ' + count;
 }
@@ -47,7 +49,7 @@ function handleItemClick(event) {
 
 
         let count=  event.target.value.length;
-        inputTotalDone.innerText="total-done:"+ (total===count);
+        inputTotalDone.innerText="total-done:"+ (count===total);
           
          
          
@@ -57,8 +59,7 @@ function handleItemClick(event) {
         let newStorageArray = [];
         for (let i = 0; i < tempStorage.length; i++) {
         
-    
-         itemId === tempStorage[i].id? tempStorage[i].status =!tempStorage[i].status:newStorageArray;
+    itemId === tempStorage[i].id? tempStorage[i].status =!tempStorage[i].status:newStorageArray;
          newStorageArray.push(tempStorage[i]);
          setTodosToLocalStorage(newStorageArray)}
      
@@ -112,15 +113,19 @@ function renderTodoItem(text, status, id) {
     todoList.append(inputTotalDone)
    
 
-    let total=event.target.value++;
+    
+     let total=id;
     inputTotal.innerText='total:'+total;
-
-
+   
+  
+   
     let count=  event.target.value.length;
-    inputTotalDone.innerText="total-done:"+ (total===count); 
+    inputTotalDone.innerText="total-done:"+(id===count);
+    
+     
     }
 
-
+  
 
 // Helper functions 
 function getTodosFromLocalStorage() {
